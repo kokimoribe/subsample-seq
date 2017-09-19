@@ -5,8 +5,8 @@
 image: continuumio/miniconda3
 
 before_script:
-  - conda install --yes --file requirements.txt
-  - conda install --yes --file requirements-test.txt
+  - conda install --quiet --yes --file requirements.txt
+  - conda install --quiet --yes --file requirements-test.txt
   - pip install .
 
 stages:
