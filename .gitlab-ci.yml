@@ -1,0 +1,23 @@
+# Reference documentation
+# https://docs.gitlab.com/ee/ci/yaml/README.html
+
+
+image: continuumio/miniconda3
+
+before_script:
+  - conda env create -f environment.yml
+  - source activate subsample-seq
+
+stages:
+  - lint
+  - test
+
+lint:
+  stage: lint
+  script:
+    - pylint subsample_seq
+
+test:
+  stage: test
+  script:
+    - pytest tests
