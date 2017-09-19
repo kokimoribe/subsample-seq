@@ -5,8 +5,9 @@
 image: continuumio/miniconda3
 
 before_script:
-  - conda env create -f environment.yml
-  - source activate subsample-seq
+  - conda install --yes --file requirements.txt
+  - conda install --yes --file requirements-test.txt
+  - pip install .
 
 stages:
   - lint
