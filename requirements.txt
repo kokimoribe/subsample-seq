@@ -1,4 +1,2 @@
 biopython==1.69
 click==6.7
-pylint==1.7.2
-pytest==3.2.1
