@@ -80,7 +80,7 @@ Thus, the probability of the second to last sequence entering the reservoir and 
 
 `k/(n - 1) * (1 - (1/n))` which simplifies to `k/(n - 1) * (n - 1)/n`, or `k/n`.
 
-We can then use induction to prove the third to last item, the fourth to last item, etc. all have a probability of `k/n` of ending up in the reservoir.
+We can then use induction to prove the third to last sequence, the fourth to last sequence, etc. all have a probability of `k/n` of ending up in the reservoir.
 
 Lastly, let's look at the first `k` sequences. We don't need to worry about the probability of the first `k` sequences entering the reservoir since the first `k` sequences are automatically included. However, we will need to calculate the probability of a given sequence that starts in the reservoir will *remain* in the reservoir (i.e. not get replaced) at the end. As explained earlier, we know that the probability of a given sequence in the reservoir at a specific position has a probability `1/i` of it getting replaced by the `i`th sequence. Thus, the probability of *not* getting replaced by the `i`th sequence is `1 - (1/i)`, or `(i - 1)/i`. We can then deduce that a sequence in the first `k` sequences will remain in the reservoir if it does not get replaced by the `k + 1`th sequence, the `k + 2`th sequence, and so on. Thus, the probability is equal to:
 ```
