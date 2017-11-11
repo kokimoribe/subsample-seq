@@ -53,7 +53,7 @@ Randomly choose ***k*** sequences from a file containing multiple sequences. The
 1. Iterate through all sequences using the above logic:
     ```python
 
-    reservoir = [None for _ in range(k)]
+    reservoir = []
 
     for i, sequence in enumerate(sequences):
         if i < k:
