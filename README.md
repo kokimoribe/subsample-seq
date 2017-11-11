@@ -48,7 +48,7 @@ Randomly choose ***k*** sequences from a file containing multiple sequences. The
     if i >= k:
         j = random.randint(0, i)
         if j < k:
-            resorvoir[j] = sequence_i  # where `sequence_i` is the sequence found at index `i`
+            reservoir[j] = sequence_i  # where `sequence_i` is the sequence found at index `i`
     ```
 1. Iterate through all sequences using the above logic:
     ```python
