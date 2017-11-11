@@ -46,7 +46,7 @@ Randomly choose ***k*** sequences from a file containing multiple sequences. The
     # In the code implementation, assume `i` and `j` use 0-based indexing.
 
     if i >= k:
-        j = random.randrange(0, i)
+        j = random.randint(0, i)
         if j < k:
             resorvoir[j] = sequence_i  # where `sequence_i` is the sequence found at index `i`
     ```
@@ -60,7 +60,7 @@ Randomly choose ***k*** sequences from a file containing multiple sequences. The
             reservoir.append(sequence)
 
         else:
-            j = random.randrange(0, i)
+            j = random.randint(0, i)
             if j < k:
                 reservoir[j] = sequence
     ```

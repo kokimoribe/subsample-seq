@@ -21,7 +21,7 @@ def subsample(records, sample_size, seed=None):
         if i < sample_size:
             reservoir.append(item)
         else:
-            j = random.randrange(0, i)
+            j = random.randint(0, i)
             if j < sample_size:
                 reservoir[j] = item
 
