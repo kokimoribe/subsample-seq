@@ -43,7 +43,7 @@ Randomly choose ***k*** sequences from a file containing multiple sequences. The
 1. For any ***i*** th sequence that is past the ***k*** th sequence, generate a random position ***j*** that is between the start and current position ***i***. If the ***j*** th position sits within the reservoir, then replace sequence at the ***j*** th position in the reservoir with the ***i*** th sequence.
     ```python
 
-    # In the code implementation, assume `i` and `j` are referencing a 0-indexed based collection of sequences.
+    # In the code implementation, assume `i` and `j` use 0-based indexing.
 
     if i >= k:
         j = random.randrange(0, i)
