@@ -40,10 +40,10 @@ Randomly choose ***k*** sequences from a file containing multiple sequences. The
     # Assume `sequences` is an iterable containing an unknown number of sequences
     reservoir = [seq for seq in itertools.islice(sequences, k)]
     ```
-1. For any ***i*** th sequence that is past the ***k*** th sequence, generate a random position ***j*** that is between the start and current position ***i***. If the ***j*** th position sits within the reservoir, then replace sequence at the ***j*** th position in the reservoir with the ***i*** th sequence.
+1. For any ***i*** th sequence that is past the ***k*** th sequence, generate a random position ***j*** that is between the start and current position ***i*** (inclusive). If the ***j*** th position sits within the reservoir, then replace sequence at the ***j*** th position in the reservoir with the ***i*** th sequence.
     ```python
 
-    # In the code implementation, assume `i` and `j` use 0-based indexing.
+    # In the code implementation, assume `i` and `j` use 0-based indexing and `k` is the size of the reservoir.
 
     if i >= k:
         j = random.randint(0, i)
