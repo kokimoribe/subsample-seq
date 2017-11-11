@@ -31,7 +31,7 @@ pip install .
 ### Problem:
 Randomly choose ***k*** sequences from a file containing multiple sequences. The total number of sequences in the file is not known up front.
 
-### Solution:
+### Solution (https://en.wikipedia.org/wiki/Reservoir_sampling#Algorithm_R):
 1. Initialize an array of size ***k***. This array will be the `reservoir` that will eventually contain the randomly selected sequences.
 1. Populate the array with the first *k* sequences from the file.
     ```python
