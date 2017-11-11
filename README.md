@@ -1,7 +1,7 @@
-# About
+##  About
 Command line application to subsample sequences from a FASTA or FASTQ formatted text file.
 
-# Usage
+## Usage
 
 Subsample 3 sequences from a fasta file to a new file `out.fasta`.
 ```bash
@@ -18,7 +18,7 @@ Use `--seed` value for deterministic output.
 subsample-seq --file-format fasta --sample-size 3 --seed 1 examples/example.fasta out.fasta
 ```
 
-# Installation
+## Installation
 
 ```bash
 git clone git@gitlab.com:koki.moribe/subsample-seq.git
