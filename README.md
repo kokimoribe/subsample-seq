@@ -29,11 +29,11 @@ pip install .
 
 ## Algorithm
 ### Problem:
-Randomly choose ***k*** sequences from a file containing multiple sequences. The total number of sequences in the file is not known up front.
+Randomly choose `k` sequences from a file containing multiple sequences. The total number of sequences in the file is not known up front.
 
 ### Solution (https://en.wikipedia.org/wiki/Reservoir_sampling#Algorithm_R):
 Time complexity: O(*n*)
-1. Initialize an array of size ***k***. This array will be the `reservoir` that will eventually contain the randomly selected sequences.
+1. Initialize an array of size `k`. This array will be the `reservoir` that will eventually contain the randomly selected sequences.
 1. Populate the array with the first *k* sequences from the file.
     ```python
     import itertools
@@ -41,7 +41,7 @@ Time complexity: O(*n*)
     # Assume `sequences` is an iterable containing an unknown number of sequences
     reservoir = [seq for seq in itertools.islice(sequences, k)]
     ```
-1. For any ***i*** th sequence that is past the ***k*** th sequence, generate a random position ***j*** that is between the start and current position ***i*** (inclusive). If the ***j*** th position sits within the reservoir, then replace sequence at the ***j*** th position in the reservoir with the ***i*** th sequence.
+1. For any `i` th sequence that is past the `k` th sequence, generate a random position `j` that is between the start and current position `i` (inclusive). If the `j` th position sits within the reservoir, then replace sequence at the `j` th position in the reservoir with the `i` th sequence.
     ```python
 
     # In the code implementation, assume `i` and `j` use 0-based indexing and `k` is the size of the reservoir.
