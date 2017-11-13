@@ -85,7 +85,7 @@ Thus, the probability of the second to last sequence entering the reservoir and 
 
 `k/(n - 1) * (1 - (1/n))` which simplifies to `k/(n - 1) * (n - 1)/n`, or `k/n`.
 
-We can repeat this process to find the probability for any `i`th sequence to enter the reservoir and not get replaced by the remaining the sequences.
+We can repeat this process to find the probability for any `i`th sequence to enter the reservoir and not get replaced by the remaining sequences.
 
 ```text
 k/i * (1 - (1/(i + 1))) * (1 - (1/(i + 2))) * (1 - (1/(i + 3)) * ... * (1 - (1/(i + m)))
